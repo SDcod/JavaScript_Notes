@@ -1,0 +1,237 @@
+JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS 
+
+-Variables & Constants : var, let & const 
+			var a; //declaration	
+			a = 12; //initializtion
+
+-Hoisting : var and functions are hoisted in JS
+ undefined : exists but don't know
+ not defined : does not exists	
+ 
+			-Variables declared with var are hoisted, but their initialization stays where it is. Before initialization, they are undefined.
+			-Variables declared with let or const are also hoisted, but they are in a "temporal dead zone" and cannot be accessed before the declaration.
+			-Function declarations are fully hoisted, meaning you can call a function before it's defined in the code.
+			
+			**The temporal dead zone (TDZ) is a concept in JavaScript that refers to the time period from the start of a block until the variable declaration is encountered. During this time, the variable is in a "dead zone" and cannot be accessed, resulting in a ReferenceError if you try to use it.
+
+			Key Points:
+				Applies to let and const: The TDZ only affects variables declared with let and const. Variables declared with var do not have a temporal dead zone.
+
+				Scope Limitation: The TDZ exists within the block scope. If a variable is declared within a block, the TDZ will start at the beginning of that block and last until the declaration is reached.
+
+				ReferenceError: Accessing a variable in the TDZ will throw a ReferenceError, indicating that the variable is not defined.
+			
+			
+
+-Types of data :
+	Primitive : number
+				string
+				boolean
+				undefined
+				null
+				symbol
+	Reference Type : (if we make operations on a reference then original value also changes)
+				anything that is "typeof" "object"
+				objects
+				arrays
+				functions 
+-Conditionals :
+			if else
+			else if
+			ternary operator
+			switch case
+-Loops : for
+		 while
+		 
+-Functions : parameters are variables, arguments are real values that are passed to those variables.
+-Arrays	: push, pop, shift,unshift, splice.
+-Objects : props vs methods
+				
+				
+				--ADVANCE
+				
+				
+--Variables diff
+	var :    - ES5  
+		     - funciton scoped - it can be used anywhere in the parent function.
+				function test(){
+					for (var i=1;i<10;i++){
+						console.log(i)
+					}
+					console.log(i) //10 will be printed , if we use let the it will throw an error for undefined
+				}
+				
+			 - var adds itself to the window object.
+		
+		
+	let,const :- ES6
+			   - braces scoped , blocked scoped
+			   - let and const does not add itself to window.
+	
+	
+--window object : The window object represents an open window in a browser. (JS language can use features which it doesn't have from the window object).
+					If a document contain frames (<iframe> tags), the browser creates one window object for the HTML document, and one additional window object for each frame.	
+					
+--browser contex API : provides features from window, stack, heap .
+--Stack : FILO
+-- heap memory : - dynamic memory allocation
+				 - happens at runtime in browser
+				 - variables with var are stored in heap memory (also arrays, functions,objects).
+				 
+--Execution contex : A container is created when a function is called and it contains variables, function and lexical environment.
+				
+		An execution context is the environment in which JavaScript code is evaluated and executed. It contains everything the code needs to run, including the variables, functions, and the value of this. There are two main types:
+
+		>Global Execution Context: Created when the script first starts, containing global variables and functions.
+		>Function Execution Context: Created when a function is invoked, containing the function’s local variables, arguments, and inner functions.
+		
+--Lexical Environment : A place where JavaScript keeps track of variables and functions during execution.
+		It consists of two parts:
+		>Local environment: Where variables and functions are stored inside the current block or function.
+		>Outer reference: A link to the surrounding environment where the code was written, so it can access variables from the parent scope.
+		
+		-It holds the information about the accessibility of a function ( what all thing the function can access during execution )
+			i.e. SCOPE CHAIN
+		
+			It consists of the current scope and a reference to its outer (parent) scope, forming a chain known as the scope chain.
+			
+--How to copy reference values : by using spread operator (...varName), ex : [...arr],{...obj}. ( we cannot use spread operator to clone a function ). this type of copying will only create shallow copy, meaning nested objects will still be referenced and any changes to child nested valued will affect parent). 
+	Spread is mostly used to merge two arrays/objects.
+	
+--Truthy and Falsy values : in JS all values belong to only these two types
+	-Falsy : 0 / -0 / 0n / " " / false / null / undefined / NaN / document.all
+	-Truthy : all except above (true,nonzero numbers, non empty strings, objects, bigint values excluding zero, symbols)
+
+--forEach : works on ARRAYS to loop through the entire array values one by one. (by default forEach creates a temporary copy, and original array is intact).
+		arr.forEach((val)=>{val+1})
+		
+--forin : used to loop OBJECTS.
+		let obj = {name:'tester'}
+		for(var key in obj){
+			console.log(key); //name
+		}
+		
+--do-while : do{
+				//code block;
+				}
+			 while(condition); do statement will execute atleast once in any condition.
+			 
+--callback functions : A func that is passed as an argument to another func and is executed after some action is completed in that function.
+						
+--first class functions : functions can be assigned to variables,
+						  functions can be passed as arguments to other functions,
+						  functions can be returned from other functions.
+						  
+							const demo = function(a){
+								a();
+							};
+							demo(()=>{console.log('hello')};);
+							
+--how are arrays stored in js behind the scenes : Arrays are stored as objects in JS
+				var arr = [1,2,3];
+				var arr = {
+					0 : 1,
+					1 : 2,
+					2 : 3
+					};
+					
+				** in js even if we add a value at a -ve index it will NOT throw an error
+				arr[-1] = 10; // [ 1, 2, 3, '-1': 10 ].
+				
+				typeof(arr); //return 'object'
+				Array.isArray(arr); // return true if array , and false if not.
+
+--object methods : delete object props
+					// delet obj.prop;
+					
+			
+			
+			***** ASYNCHRONOUS JAVASCRIPT ****
+			
+	
+-Synchronous - task executes one by one. (JS in not asychronous)
+-Asynchronous - task start at same time, finishes accordingly with respect to its own time.
+
+--Async code :  Code that allows other parts of the program to keep running while waiting for a task (like fetching data from a server) to finish.
+
+			console.log('one');
+			setTimeout(()=>{
+				console.log('two'); //this code runs after two seconds. if we want to 
+			},2000);
+			console.log('three');
+			
+			output : one
+					 three	
+					 two
+					 
+	**HERE the code inside the callback function of setTimeout will run once the defined time is completed, until then all other JS code will keep running parallely.
+	
+	
+--how JS handles Async code : 
+		- There are two stacks 
+			MAIN Stack - In this stack JS executes the code and provides output.
+			SIDE Stack - In this stack JS executes the code. (Asycn code is pushed in side stack).
+			
+			All the async code is pushed to main stack and whenever the code completes its execution in main stack and it is empty, then only 
+			
+			---->'EVENT LOOP'<---- handles passing of the async from Side Stack to Main Stack only when the async code has completed its execution in Side stack.
+			
+			  Alternate expln :-
+				s-CODE 1 
+				a-CODE 2
+				s-CODE 3
+				
+				MAIN Stack /calls stack			SIDE stack /task queue
+				code 1							code 2
+				code 3
+				
+				
+				OUTPUT : 
+				code 1  //code 1 executes - complete - output 
+				code 3  //code 3 executes - complete - output
+				code 2  //code 2 is in side stack - executing - if complete - and main stack empty - bring to main stack - output.
+				
+				
+			
+-- JS is not Asynchronous !!!! - JS is a single threaded language (NOT multithreaded).
+				While JavaScript runs one thing at a time on the main thread, it leverages the event loop, callback queues, and Web APIs (or Node APIs) to handle asynchronous tasks in the background. Once these tasks are ready, they are pushed back into the call stack, ensuring smooth, non-blocking execution of both synchronous and asynchronous operations.
+					
+					
+--READ more about Asynchronous workflow in JS
+
+--Callbacks : A func passed as an argument to another func and is executed after some action is completed in that function.
+
+--Promises : object representing a value which may be available now, infuture, never.
+		THREE states in promises
+			Pending
+			Resolved
+			Rejected
+			
+--async await :
+				A cleaner way to work with Promises, making your asynchronous code look more like synchronous code.
+				async: Used to declare a function that returns a Promise.
+				await: Pauses the execution of the function until the Promise is resolved or rejected.
+				
+			Example:
+			
+			async function fetchData() {
+			  let raw = await fetch("https://api.example.com/data");
+			  let data = await raw.json();
+			  console.log("Data fetched", data); //this line wont execute because 'data' is dependent on a async code.
+			}
+
+			fetchData();
+			
+--fetch 
+--setTimeout
+--setInterval ...etc.
+
+
+--Concurrency and parallelism
+	
+	-concurrency : in js sync code and async code is being processed at a time in different stacks.
+	-parallelism : deals with working tasks on processor cores.
+	-throttling : to control number of exections through code.
+	
+	
+	***********DOM manipulation*************
