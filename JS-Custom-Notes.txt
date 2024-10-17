@@ -4,13 +4,24 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 			var a; //declaration	
 			a = 12; //initializtion
 
--Hoisting : var and functions are hoisted in JS
+-Hoisting : var and functions are hoisted in JS (Variable,Functions,Classes are hoisted in JS);
+			
  undefined : exists but don't know
  not defined : does not exists	
  
 			-Variables declared with var are hoisted, but their initialization stays where it is. Before initialization, they are undefined.
-			-Variables declared with let or const are also hoisted, but they are in a "temporal dead zone" and cannot be accessed before the declaration.
-			-Function declarations are fully hoisted, meaning you can call a function before it's defined in the code.
+			
+			-Variables declared with let or const are also hoisted, but they are in a "temporal dead zone" and cannot be accessed before the declaration. ( it will throw reference error : cannot access 'variable name' before initialization...
+			(in case of const you cannot even decalre it without initialization, syntax error will be thrown. Even if you declare & init the variable and call it before that then above reference error will be thrown).
+			***In short TDZ is area where a variable is hoisted but not accessible.
+			
+			
+			
+			-Function Declarations vs. Function Expressions:
+				Function Declarations (like function myFunction() {}) are fully hoisted, meaning you can call them before their declaration.
+				Function Expressions (using var, let, or const with a function assigned to a variable) are treated as variable assignments, and only the declaration is hoisted (not the assignment).
+			***For funcitions the TDZ lies within the functional scope for a variable declared inside a function.
+			
 			
 			**The temporal dead zone (TDZ) is a concept in JavaScript that refers to the time period from the start of a block until the variable declaration is encountered. During this time, the variable is in a "dead zone" and cannot be accessed, resulting in a ReferenceError if you try to use it.
 
