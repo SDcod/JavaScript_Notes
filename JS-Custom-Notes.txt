@@ -52,11 +52,12 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 			ternary operator
 			switch case
 -Loops : for
-		 while
+	while
 		 
 -Functions : parameters are variables, arguments are real values that are passed to those variables.
 -Arrays	: push, pop, shift,unshift, splice.
--Objects : props vs methods
+-Objects : properties : are the keys of a value,
+	   methods : functions inside an object.
 				
 				
 				--ADVANCE
