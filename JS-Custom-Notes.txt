@@ -55,11 +55,12 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 			ternary operator - true ? "yes":"no";
 			switch case
 -Loops : for
-		 while
+	while
 		 
 -Functions : parameters are variables, arguments are real values that are passed to those variables.
 -Arrays	: push, pop, shift,unshift, splice.
--Objects : props vs methods
+-Objects : properties : are the keys of a value,
+	   methods : functions inside an object.
 				
 				
 				--ADVANCE
@@ -260,25 +261,3 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 	Even after the outer function finishes executing, the inner function retains a reference to these variables, creating a closure.
 
 	***********DOM manipulation*************
-
--What is DOM?
-
--4 pillars : 
-	1.Selecting an element : 
-		-document.querySelector('selector')
-		-document.querySelector("#id_name/.class_name/element") ; //select only fist 
-		-document.querySelectorAll("#id_name/.class_name/element") ; //select many element and return nodeList
-		-we need to use forEach method get access of each element of nodeList(set Of Many Element) ;
-		-elem.forEach(function(e){ //logic }) ; 
-		
-	2.Changing HTML :
-		-document.querySelector('h1').innerHTML = 'Hello there'
-	3.Changing CSS :
-		-document.querySelector('h1').style.color = 'red';
-		-document.querySelector('h1').style.backgroundColor = 'yellow'; //in JavaScript we cannot use '-' compared to css so we use camelcase.
-	4.Event Listeners :
-		-const headingText = document.querySelector("h1");
-			headingText.style.color = "red";
-			headingText.addEventListener("click", function () {
-			headingText.style.color = "black";
-			});
