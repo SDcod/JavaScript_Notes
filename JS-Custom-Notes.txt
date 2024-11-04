@@ -46,10 +46,13 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 				objects
 				arrays
 				functions 
+
+			*Both arrays and functions inherit from Object, which is why typeof categorizes them as "object" or "function" for functions, even though they have specialized behaviors.
+
 -Conditionals :
 			if else
 			else if
-			ternary operator
+			ternary operator - true ? "yes":"no";
 			switch case
 -Loops : for
 		 while
@@ -243,6 +246,39 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 	-concurrency : in js sync code and async code is being processed at a time in different stacks.
 	-parallelism : deals with working tasks on processor cores.
 	-throttling : to control number of exections through code.
-	
-	
+
+
+--Closure : 
+	*Closures are a core concept in JavaScript that allow functions to remember and access variables from their lexical environment (the scope in which they were created), even after that scope has finished executing. In simpler terms, a closure lets a function "remember" the variables outside of itself, even if the outer function has completed.
+
+	*How Closures Work
+	When a function is defined within another function, it has access to:
+	Its own local variables.
+	The parameters of the outer function.
+	The variables in the outer function's scope.
+
+	Even after the outer function finishes executing, the inner function retains a reference to these variables, creating a closure.
+
 	***********DOM manipulation*************
+
+-What is DOM?
+
+-4 pillars : 
+	1.Selecting an element : 
+		-document.querySelector('selector')
+		-document.querySelector("#id_name/.class_name/element") ; //select only fist 
+		-document.querySelectorAll("#id_name/.class_name/element") ; //select many element and return nodeList
+		-we need to use forEach method get access of each element of nodeList(set Of Many Element) ;
+		-elem.forEach(function(e){ //logic }) ; 
+		
+	2.Changing HTML :
+		-document.querySelector('h1').innerHTML = 'Hello there'
+	3.Changing CSS :
+		-document.querySelector('h1').style.color = 'red';
+		-document.querySelector('h1').style.backgroundColor = 'yellow'; //in JavaScript we cannot use '-' compared to css so we use camelcase.
+	4.Event Listeners :
+		-const headingText = document.querySelector("h1");
+			headingText.style.color = "red";
+			headingText.addEventListener("click", function () {
+			headingText.style.color = "black";
+			});

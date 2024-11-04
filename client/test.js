@@ -1,5 +1,7 @@
-print();
-
+let x = [1, 2];
 var print = function () {
-  console.log("hello");
+  x.unshift("asd");
+  console.log(x);
 };
+
+print();
