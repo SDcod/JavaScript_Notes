@@ -274,7 +274,7 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 		-elem.forEach(function(e){ //logic }) ; 
 		
 	2.Changing HTML :
-		-document.querySelector('h1').innerHTML = 'Hello there'
+		-document.querySelector('#box').innerHTML = '<h1>Hello there</h1>' //to change text use element.textContent
 	3.Changing CSS :
 		-document.querySelector('h1').style.color = 'red';
 		-document.querySelector('h1').style.backgroundColor = 'yellow'; //in JavaScript we cannot use '-' compared to css so we use camelcase.
@@ -284,3 +284,10 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 			headingText.addEventListener("click", function () {
 			headingText.style.color = "black";
 			});
+
+-Multiple events?--see project video
+
+-Multiple elements at same time:
+	-document.querySelectorAll("#id_name/.class_name/element") ; //select many element and return nodeList
+		-we need to use forEach method get access of each element of nodeList(set Of Many Element) ;
+		-elem.forEach(function(e){ //logic }) ; 
