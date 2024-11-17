@@ -1,18 +1,18 @@
 let nums = [1, 2, 3, 4, 5, 6, 7]; //output [6,5,1,2,3,4]
+//using while loop and swapping
+// const reverse = (arr, start, end) => {
+//   while (start < end) {
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
 
-const reverse = (arr, start, end) => {
-  while (start < end) {
-    let temp = arr[start];
-    arr[start] = arr[end];
-    arr[end] = temp;
+//     start++;
+//     end--;
+//   }
+//   return arr;
+// };
 
-    start++;
-    end--;
-  }
-  return arr;
-};
-
-console.log(reverse(nums, 0, nums.length - 1));
+// console.log(reverse(nums, 0, nums.length - 1));
 
 //using for loop
 let originalArr = [1, 2, 3, 4, 5];
@@ -30,3 +30,7 @@ function revArr(arr) {
 }
 
 console.log(revArr(originalArr));
+
+//************************************ */
+//Using inbuilt js functions.
+// console.log(nums.reverse());
