@@ -40,3 +40,36 @@ function getSecondLargest(arr) {
 }
 
 console.log(getSecondLargest([45, 23, 45, 55, 55, 1, 2, 44]));
+
+//WITHOUT sorting :
+
+let maxNum = arr[0];
+let minNum = arr[0];
+let secondL = -Infinity;
+function findMax(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxNum) {
+      maxNum = arr[i];
+    }
+  }
+  return maxNum;
+}
+
+function findMin(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < minNum) {
+      minNum = arr[i];
+    }
+  }
+  return minNum;
+}
+findMax(arr);
+findMin(arr);
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] < maxNum && arr[i] !== maxNum) {
+    secondL = arr[i];
+  }
+}
+
+console.log("secondLarge : " + secondL);
