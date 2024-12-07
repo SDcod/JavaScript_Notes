@@ -34,3 +34,14 @@ console.log(revArr(originalArr));
 //************************************ */
 //Using inbuilt js functions.
 // console.log(nums.reverse());
+
+//***********************using while loop */
+// function reverseArr(arr, start, end) {
+//   while (start < end) {
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
+//     start++;
+//     end--;
+//   }
+// }
