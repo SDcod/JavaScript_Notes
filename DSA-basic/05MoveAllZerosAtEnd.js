@@ -51,14 +51,29 @@
 // moveZeroesToEnd(arr, n);
 
 //********************most easiest and covers edge cases */
-const moveZeroesToEnd = (arr) => {
-  const nonZeroes = arr.filter((num) => num !== 0); // Extract non-zero elements
-  const zeroes = new Array(arr.length - nonZeroes.length).fill(0); // Fill zeros
-  return [...nonZeroes, ...zeroes]; // Combine non-zero and zero arrays
-};
+// const moveZeroesToEnd = (arr) => {
+//   const nonZeroes = arr.filter((num) => num !== 0); // Extract non-zero elements
+//   const zeroes = new Array(arr.length - nonZeroes.length).fill(0); // Fill zeros
+//   return [...nonZeroes, ...zeroes]; // Combine non-zero and zero arrays
+// };
 
-// Example usage
-console.log(moveZeroesToEnd([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9])); // Output: [1, 9, 8, 4, 2, 7, 6, 9, 0, 0, 0, 0]
-console.log(moveZeroesToEnd([0, 0, 0])); // Output: [0, 0, 0]
-console.log(moveZeroesToEnd([1, 2, 3])); // Output: [1, 2, 3]
-console.log(moveZeroesToEnd([])); // Output: []
+// // Example usage
+// console.log(moveZeroesToEnd([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9])); // Output: [1, 9, 8, 4, 2, 7, 6, 9, 0, 0, 0, 0]
+// console.log(moveZeroesToEnd([0, 0, 0])); // Output: [0, 0, 0]
+// console.log(moveZeroesToEnd([1, 2, 3])); // Output: [1, 2, 3]
+// console.log(moveZeroesToEnd([])); // Output: []
+
+//******************************without a new array */
+function zeroAtEnd(arr) {
+  let i = 0;
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[j] !== 0) {
+      [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap
+      i++;
+    }
+  }
+
+  return arr;
+}
+
+console.log(zeroAtEnd([1, 2, 0, 5, 0, 3, 2]));
