@@ -23,4 +23,4 @@ const rmDupHash = (a) => {
   }
   return result;
 };
-console.log(rmDuplicates(arr));
+console.log(rmDupHash(arr));
