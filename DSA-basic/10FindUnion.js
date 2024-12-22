@@ -14,9 +14,10 @@
 
 //************************Using HashMap **************** O(n+m)/
 
-// function getUnionWithoutSet(arr1, arr2) {
+// function getUnionWithHash(arr1, arr2) {
 //   if (arr1.length === 0) return arr2; //edge case
 //   if (arr2.length === 0) return arr1; //edge case
+
 //   let hashMap = {};
 //   let result = [];
 
@@ -39,10 +40,10 @@
 //   return result;
 // }
 
-// console.log(getUnionWithoutSet([1, 2, 3, 4, 5, 6], [3, 4, 5, 6, 7, 8]));
+// console.log(getUnionWithHash([1, 2, 3, 4, 5, 6], [3, 4, 5, 6, 7, 8]));
 
 //*************************What if arrays are already sorted can we solve without O(n+m);
 //may contain duplicates
 
 // let a = [1, 2, 2, 3];
-// let b = [2, 3, 3, 4, 4];
+// let b = [2, 2, 3, 3, 4, 4];
