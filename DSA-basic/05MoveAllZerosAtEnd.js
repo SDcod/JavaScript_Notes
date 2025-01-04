@@ -77,3 +77,5 @@ function zeroAtEnd(arr) {
 }
 
 console.log(zeroAtEnd([1, 2, 0, 5, 0, 3, 2]));
+
+//same logic can be used for problems such as move all even numbers to the end/start etc.

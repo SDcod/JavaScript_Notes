@@ -1,4 +1,4 @@
-let arr = [1, 1, 2, 3, 3, 5, 5, 6]; //[1,2,3,5,6,_,_]
+let arr = [1, 2, 2, 3, 3, 5, 5, 6]; //[1,2,3,5,6,_,_]
 let len = arr.length;
 
 function removeDuplicates(arr, len) {
@@ -6,7 +6,7 @@ function removeDuplicates(arr, len) {
 
   for (let right = 1; right < len; right++) {
     if (arr[right] !== arr[left]) {
-      //if any number similar to the left index occurs then first increment the left and replace with the right one.
+      //if any number not similar to the left index occurs then first increment the left and replace with the right one.
       left++;
       arr[left] = arr[right];
     }
