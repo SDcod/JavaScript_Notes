@@ -10,3 +10,5 @@ const checkAsc = (arr) => {
 };
 
 console.log(checkAsc(a));
+
+//just reverse the condition for descending

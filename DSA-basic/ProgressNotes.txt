@@ -5,6 +5,7 @@ Key Points :
 	- two pointer techniques.
 	- sliding window techniques.
 	- HashMap (aka objects).
+	- Set
 
 
 
@@ -28,11 +29,16 @@ Array Questions
 
 -Find the Union and Intersection of two arrays.-> using HashMaps also make sure to handle duplicates using a counter.
 
--Check if an Array is Sorted in ascending order.->
-Find the Missing Number in an array of numbers from 1 to n.
-Find the Intersection of Two Arrays.
-Separate Even and Odd Numbers in an array.
-Find the Largest Three Elements in an array.
+-Check if an Array is Sorted in ascending order.-> comparing with two contiguous elements
+
+-Find the Missing Number in an array of numbers from 1 to n.->using set.has(num) or hashmap 
+			OR if only one number is missing the we can use summation formula n*(n+1)/2
+
+-Find the Intersection of Two Arrays. -> using hashmap and counter as the value
+
+-Separate Even and Odd Numbers in an array. -> using two pointer for inplace OR two for loops with new arr; 
+
+-Find the Largest Three Elements in an array.
 Find the Sum of All Pairs Equal to a Given Sum in an array.
 Find the Subarray with the Maximum Sum (Kadane’s Algorithm).
 Sort an Array of 0s, 1s, and 2s without using sorting functions.
