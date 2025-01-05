@@ -6,6 +6,7 @@ Key Points :
 	- sliding window techniques.
 	- HashMap (aka objects).
 	- Set
+	- Sorting function
 
 
 
@@ -38,8 +39,10 @@ Array Questions
 
 -Separate Even and Odd Numbers in an array. -> using two pointer for inplace OR two for loops with new arr; 
 
--Find the Largest Three Elements in an array.
-Find the Sum of All Pairs Equal to a Given Sum in an array.
+-Find the Largest Three Elements in an array.-> using set and sort OR by three variables and else if blocks;
+
+-Find the Sum of All Pairs Equal to a Given Sum in an array.-> using hashmap similar to the two sum with some logic updates;
+
 Find the Subarray with the Maximum Sum (Kadane’s Algorithm).
 Sort an Array of 0s, 1s, and 2s without using sorting functions.
 Merge Two Sorted Arrays without using extra space.
