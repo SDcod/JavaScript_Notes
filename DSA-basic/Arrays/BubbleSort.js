@@ -1,5 +1,5 @@
 //bubble sort O(n^2)
-//sort by comparing each element with the adajacent
+//sort by comparing each element with the adajacent and put the largest elements in correct place
 
 const arr = [64, 34, 25, 12, 22, 11, 90];
 function bubbleSort(arr) {

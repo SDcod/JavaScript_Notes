@@ -196,7 +196,7 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 				a-CODE 2
 				s-CODE 3
 				
-				MAIN Stack /calls stack			SIDE stack /task queue
+				MAIN Stack /call stack			SIDE stack /task queue
 				code 1							code 2
 				code 3
 				

@@ -1,3 +1,5 @@
+//Sort by inserting the current element i.e into its correct position by comparing it with the previous elements.
+
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i]; // Element to be inserted

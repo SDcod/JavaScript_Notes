@@ -1,3 +1,6 @@
+//the idea here is to sort the array one by one ;
+// selecting a min/max element then comparing it with the rest of unsorted array, swapping each element with it accordingly.
+
 function selectionSortFun(arr) {
   const len = arr.length;
 
