@@ -45,67 +45,71 @@ Array Questions
 
 -Find the Sum of All Pairs Equal to a Given Sum in an array.-> using hashmap similar to the two sum with some logic updates;
 
-Find the Subarray with the Maximum Sum (Kadane’s Algorithm).
-Sort an Array of 0s, 1s, and 2s without using sorting functions.
-Merge Two Sorted Arrays without using extra space.
-Find the Majority Element in an array (appears more than n/2 times).
-Find the Elements that Appear More than n/3 Times in an array.
-Count Inversions in an Array.
-Find the Kth Largest Element in an array.
+-Find the Subarray with the Maximum Sum (Kadane’s Algorithm).->calculate the maxEnding based on sum till the current element. return the maximum sum using another max variable.
+
+-Sort an Array of 0s, 1s, and 2s without using sorting functions. -> using three pointers and while loop
+
+-Merge Two Sorted Arrays without using extra space.
+-Find the Majority Element in an array (appears more than n/2 times).
+-Find the Elements that Appear More than n/3 Times in an array.
+-Count Inversions in an Array.
+-Find the Kth Largest Element in an array.
 
 String Questions
-Check if a String is a Palindrome.
-Reverse a String without using built-in functions.
-Find the First Non-Repeating Character in a string.
-Check if Two Strings are Anagrams of each other.
-Count the Number of Vowels and Consonants in a string.
-Remove Duplicate Characters in a string.
-Implement a Basic String Compression (e.g., "aaabbc" becomes "a3b2c1").
-Count the Frequency of Characters in a string.
-Check if a String Contains Only Digits.
-Find the Longest Common Prefix in an array of strings.
-Check if One String is a Rotation of Another (e.g., "waterbottle" and "erbottlewat").
-Reverse Each Word in a Sentence.
-Find All Substrings of a String.
-Find the Longest Palindromic Substring.
-Implement the strstr() Function (find the index of a substring within a string).
-Check if a String is a Valid Shuffle of two other strings.
-Find the Longest Repeating Character Sequence in a string.
-Replace Spaces with "%20" in a given string (like URL encoding).
-Determine if a String Has All Unique Characters.
-Convert a String to an Integer without using parseInt.
-Linked List Questions (if you’re ready to work with linked lists in JavaScript)
-Implement a Singly Linked List.
-Reverse a Linked List.
-Find the Middle Element of a linked list.
-Check if a Linked List has a Cycle.
-Detect the Start of a Cycle in a linked list.
-Merge Two Sorted Linked Lists.
-Remove Duplicates from an Unsorted Linked List.
-Find the Kth Element from the End of a linked list.
-Check if a Linked List is a Palindrome.
-Split a Linked List into Two Halves.
+-Check if a String is a Palindrome.
+-Reverse a String without using built-in functions.
+-Find the First Non-Repeating Character in a string.
+-Check if Two Strings are Anagrams of each other.
+-Count the Number of Vowels and Consonants in a string.
+-Remove Duplicate Characters in a string.
+-Implement a Basic String Compression (e.g., "aaabbc" becomes "a3b2c1").
+-Count the Frequency of Characters in a string.
+-Check if a String Contains Only Digits.
+-Find the Longest Common Prefix in an array of strings.
+-Check if One String is a Rotation of Another (e.g., "waterbottle" and "erbottlewat").
+-Reverse Each Word in a Sentence.
+-Find All Substrings of a String.
+-Find the Longest Palindromic Substring.
+-Implement the strstr() Function (find the index of a substring within a string).
+-Check if a String is a Valid Shuffle of two other strings.
+-Find the Longest Repeating Character Sequence in a string.
+-Replace Spaces with "%20" in a given string (like URL encoding).
+-Determine if a String Has All Unique Characters.
+-Convert a String to an Integer without using parseInt.
+-Linked List Questions (if you’re ready to work with linked lists in JavaScript)
+-Implement a Singly Linked List.
+-Reverse a Linked List.
+-Find the Middle Element of a linked list.
+-Check if a Linked List has a Cycle.
+-Detect the Start of a Cycle in a linked list.
+-Merge Two Sorted Linked Lists.
+-Remove Duplicates from an Unsorted Linked List.
+-Find the Kth Element from the End of a linked list.
+-Check if a Linked List is a Palindrome.
+-Split a Linked List into Two Halves.
 
 Miscellaneous Questions
-Implement a Stack using an array.
-Implement a Queue using an array.
-Implement Binary Search for a sorted array.
-Sort an Array using Bubble Sort.
-Sort an Array using Selection Sort.
-Implement Insertion Sort.
-Calculate the Factorial of a number using recursion.
-Generate Fibonacci Sequence up to n using recursion.
-Check if a Number is Prime.
-Find All Prime Numbers up to n (Sieve of Eratosthenes).
-Calculate the Power of a Number without using the built-in ** operator.
-Find the Greatest Common Divisor (GCD) of two numbers.
-Find the Least Common Multiple (LCM) of two numbers.
-Implement Binary Search on a sorted array.
-Count the Number of Set Bits in a binary representation of a number.
-Find All Subsets of an Array (Power Set).
-Generate All Permutations of a String.
-Implement Depth-First Search (DFS) on a graph.
-Implement Breadth-First Search (BFS) on a graph.
-Solve the Tower of Hanoi Problem using recursion.
+-Implement a Stack using an array.
+-Implement a Queue using an array.
+-Implement Binary Search for a sorted array.
+-Sort an Array using Bubble Sort. -> comparing adjacent elements then swapping it
+-Sort an Array using Selection Sort. -> comparig the elements from unsorted subarr to the current minimum key and swapping it.
+-Implement Insertion Sort.-> comparing the current element with all previous and swapping with correct position.
+-Quick sort -> divide using pivot apply recursion on left , right sub array
+-Merge Sort -> divide 
+-Calculate the Factorial of a number using recursion.
+-Generate Fibonacci Sequence up to n using recursion.
+-Check if a Number is Prime.
+-Find All Prime Numbers up to n (Sieve of Eratosthenes).
+-Calculate the Power of a Number without using the built-in ** operator.
+-Find the Greatest Common Divisor (GCD) of two numbers.
+-Find the Least Common Multiple (LCM) of two numbers.
+-Implement Binary Search on a sorted array.
+-Count the Number of Set Bits in a binary representation of a number.
+-Find All Subsets of an Array (Power Set).
+-Generate All Permutations of a String.
+-Implement Depth-First Search (DFS) on a graph.
+-Implement Breadth-First Search (BFS) on a graph.
+-Solve the Tower of Hanoi Problem using recursion.
 
 
