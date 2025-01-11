@@ -1,5 +1,7 @@
-// Online Javascript Editor for free
-// Write, Edit and Run your Javascript code using JS Online Compiler
+//select a pivot point (mostly it will be start or end);
+//divide the array into three subarrays left ,right , and middle (to ensure elements equal to the pivot are either excluded from further recursion or grouped correctly.);
+//run a loop through the array "ele<pivot add to left" and "ele>pivot add to right" and if equal to pivot add to middle sub array;
+// run this until base case is satisfied i.e only one elment left in all of sub arrays
 
 const quickSort = (arr) => {
   let len = arr.length;
