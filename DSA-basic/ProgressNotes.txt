@@ -49,7 +49,8 @@ Array Questions
 
 -Sort an Array of 0s, 1s, and 2s without using sorting functions. -> using three pointers and while loop
 
--Merge Two Sorted Arrays without using extra space.
+-Merge Two Sorted Arrays without using extra space.-> comparing the element of arr1 with arr2[0], swapping , then resorting arr2 with insertion sort.
+
 -Find the Majority Element in an array (appears more than n/2 times).
 -Find the Elements that Appear More than n/3 Times in an array.
 -Count Inversions in an Array.
