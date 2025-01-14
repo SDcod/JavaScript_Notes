@@ -15,6 +15,7 @@ function merge(arr1, arr2) {
       let first = arr2[0];
       let j = 1;
 
+      //sort the second array
       while (j < arr2.length && arr2[j] < first) {
         arr2[j - 1] = arr2[j];
         j++;

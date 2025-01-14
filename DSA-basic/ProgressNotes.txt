@@ -49,10 +49,12 @@ Array Questions
 
 -Sort an Array of 0s, 1s, and 2s without using sorting functions. -> using three pointers and while loop
 
--Merge Two Sorted Arrays without using extra space.-> comparing the element of arr1 with arr2[0], swapping , then resorting arr2 with insertion sort.
+-Merge Two Sorted Arrays without using extra space.-> comparing the element of arr1 with arr2[0], swapping , then resorting arr2 with insertion sort so we do inplace sorting.
 
--Find the Majority Element in an array (appears more than n/2 times).
--Find the Elements that Appear More than n/3 Times in an array.
+-Find the Majority Element in an array (appears more than n/2 times). - > using a hashmap or Booyer-Moore Algo
+
+-Find the Elements that Appear More than n/3 Times in an array. - > **using hashmap it's easy to implement or Booyer-Moore Algo modified for n/3 elements as there will only be 2 of them
+
 -Count Inversions in an Array.
 -Find the Kth Largest Element in an array.
 
