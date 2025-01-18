@@ -7,8 +7,12 @@ Key Points :
 	- HashMap (aka objects).
 	- Set
 	- Sorting function
-	- Recursion**
+	- Recursion
 	- Sorting techniques - Bubble,Selection,Insertion,Quick,Merge
+	- Stack**
+	- LinkedList**
+	- Queue**
+	- Heap(priority queue)**
 
 
 
@@ -56,7 +60,7 @@ Array Questions
 -Find the Elements that Appear More than n/3 Times in an array. - > **using hashmap it's easy to implement or Booyer-Moore Algo modified for n/3 elements as there will only be 2 of them
 
 -Count Inversions in an Array.
--Find the Kth Largest Element in an array.
+-Find the Kth Largest Element in an array. -> using max-heap and min-heap ** learn and implement a heap first
 
 String Questions
 -Check if a String is a Palindrome.
