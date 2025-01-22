@@ -9,9 +9,9 @@ Key Points :
 	- Sorting function
 	- Recursion
 	- Sorting techniques - Bubble,Selection,Insertion,Quick,Merge
-	- Stack**
+	- Stack
 	- LinkedList**
-	- Queue**
+	- Queue
 	- Heap(priority queue)**
 
 

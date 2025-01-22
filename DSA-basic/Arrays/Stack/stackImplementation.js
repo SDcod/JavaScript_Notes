@@ -1,4 +1,4 @@
-// methods :
+// LIFO methods :
 // push, pop, peek,isEmpty,clear,size;
 
 class stackImp {
