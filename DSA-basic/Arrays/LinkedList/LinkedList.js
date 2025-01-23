@@ -19,7 +19,7 @@ class LinkedList {
     const newNode = new Node(data);
 
     newNode.next = this.head;
-    this.head = newNode;
+    this.head = newNode; //{data: data, next: nextNode}
   }
 
   //method to add the item to end of linkedlist.
