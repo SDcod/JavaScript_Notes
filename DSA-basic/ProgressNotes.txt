@@ -10,9 +10,9 @@ Key Points :
 	- Recursion
 	- Sorting techniques - Bubble,Selection,Insertion,Quick,Merge
 	- Stack
-	- LinkedList**
+	- LinkedList- implementation 
 	- Queue
-	- Heap(priority queue)**
+	- Heap(priority queue)** implementation pending
 
 
 
@@ -59,11 +59,12 @@ Array Questions
 
 -Find the Elements that Appear More than n/3 Times in an array. - > **using hashmap it's easy to implement or Booyer-Moore Algo modified for n/3 elements as there will only be 2 of them
 
+[Advance]
 -Count Inversions in an Array.
 -Find the Kth Largest Element in an array. -> using max-heap and min-heap ** learn and implement a heap first
 
 String Questions
--Check if a String is a Palindrome.
+-Check if a String is a Palindrome.->
 -Reverse a String without using built-in functions.
 -Find the First Non-Repeating Character in a string.
 -Check if Two Strings are Anagrams of each other.
