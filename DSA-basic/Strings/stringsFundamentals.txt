@@ -1,0 +1,7 @@
+Reversing Strings
+Finding Substrings
+Character Frequencies
+Anagrams and Palindromes
+Pattern Matching
+Compression and Decompression
+Advanced Problems like Longest Substring, Subsequence, etc.
