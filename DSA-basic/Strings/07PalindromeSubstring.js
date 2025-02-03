@@ -46,3 +46,38 @@ function isPalindrome(s) {
 }
 
 console.log(longestPalindrome(str)); // Output: "bab" or "aba"
+
+/*
+// **********************************************************Optimized O(n^2)
+let str = "babad";
+
+function longestPalindrome(str) {
+  let len = str.length;
+  if (len < 2) return str; // If string is empty or 1 char, return itself
+
+  let start = 0,
+    maxLength = 1;
+
+  function expandAroundCenter(left, right) {
+    while (left >= 0 && right < len && str[left] === str[right]) {
+      let currentLength = right - left + 1;
+      if (currentLength > maxLength) {
+        start = left;
+        maxLength = currentLength;
+      }
+      left--;
+      right++;
+    }
+  }
+
+  for (let i = 0; i < len; i++) {
+    expandAroundCenter(i, i); // Odd length palindrome
+    expandAroundCenter(i, i + 1); // Even length palindrome
+  }
+
+  return str.substring(start, start + maxLength);
+}
+
+console.log(longestPalindrome(str)); // Output: "bab" or "aba"
+
+*/
