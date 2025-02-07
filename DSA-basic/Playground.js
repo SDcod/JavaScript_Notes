@@ -1,16 +1,16 @@
-let a = [1, 2, 3, 5, 8];
+function solution(n) {
+  let fib = {};
+  fib[0] = 0;
+  fib[1] = 1;
 
-function solution(arr) {
-  let l = 0;
-  let r = arr.length - 1;
+  let i = 2;
+  while (i <= n) {
+    fib[i] = fib[i - 1] + fib[i - 2];
 
-  while (l < r) {
-    [arr[l], arr[r]] = [arr[r], arr[l]];
-    l++;
-    r--;
+    i++;
   }
 
-  return arr;
+  return fib;
 }
 
-console.log(solution(a));
+console.log(solution(10));

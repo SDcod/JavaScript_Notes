@@ -7,12 +7,14 @@ Key Points :
 	- HashMap (aka objects).
 	- Set
 	- Sorting function
-	- Recursion
 	- Sorting techniques - Bubble,Selection,Insertion,Quick,Merge
 	- Stack
 	- LinkedList- implementation 
 	- Queue
 	- Heap(priority queue)** implementation pending
+	- Recursion**
+	- Dynamic Programming**
+	- OOPS**
 
 
 
