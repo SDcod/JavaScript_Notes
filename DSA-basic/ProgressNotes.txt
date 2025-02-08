@@ -15,7 +15,7 @@ Key Points :
 	- Recursion**
 	- Dynamic Programming**
 	- OOPS**
-
+	- HashTables**
 
 
 
@@ -66,10 +66,14 @@ Array Questions
 -Find the Kth Largest Element in an array. -> using max-heap and min-heap ** learn and implement a heap first
 
 String Questions
--Check if a String is a Palindrome.->
--Reverse a String without using built-in functions.
--Find the First Non-Repeating Character in a string.
--Check if Two Strings are Anagrams of each other.
+-Check if a String is a Palindrome.-> by reversing OR traversing till mid and comparing opposite index.
+
+-Reverse a String without using built-in functions. -> array methods OR reading string backwards.
+
+-Find the First Non-Repeating Character in a string. -> using a map to store frequency and returning the first having frequency one.
+
+-Check if Two Strings are Anagrams of each other. ->iterate over s1 , check freqency of each char, compare to s2.
+
 -Count the Number of Vowels and Consonants in a string.
 -Remove Duplicate Characters in a string.
 -Implement a Basic String Compression (e.g., "aaabbc" becomes "a3b2c1").

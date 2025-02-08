@@ -12,7 +12,7 @@
 // // console.log(reversed);
 // str === reversed ? console.log(true) : console.log(false);
 
-//wihthout using built in functions
+//wihthout using built in functions**************************
 
 let str = "aabbaa";
 
