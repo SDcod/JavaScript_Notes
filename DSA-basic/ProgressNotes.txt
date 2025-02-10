@@ -12,8 +12,8 @@ Key Points :
 	- LinkedList- implementation 
 	- Queue
 	- Heap(priority queue)** implementation pending
-	- Recursion**
-	- Dynamic Programming**
+	- Recursion - function calling itself.
+	- Dynamic Programming - breaking problems into overlapping subproblems.(uses memoization - hashtables/arrays)
 	- OOPS**
 	- HashTables**
 
@@ -126,4 +126,20 @@ Miscellaneous Questions
 -Implement Breadth-First Search (BFS) on a graph.
 -Solve the Tower of Hanoi Problem using recursion.
 
+HELPFUL
+-------- List of topics for basic DSA and handy notes ----------------
+Big O	    Description	          Example
+O(1)	    Constant time        	Accessing an array element.
+O(log n)	Logarithmic time	    Binary search.
+O(n)	    Linear time	          Loop through an array.
+O(n²)	    Quadratic time	      Nested loops.
+O(2ⁿ)	    Exponential time	    Recursive Fibonacci (inefficient).
 
+-log n
+The term log n (logarithm of n) describes how the input size n shrinks or grows exponentially during the execution of an algorithm.
+In the context of algorithms, we typically use base-2 logarithm (log₂ n) because it represents repeatedly dividing the input by 2.
+-trick to calculate logs say, n=16 -> log2 16 
+                            log2 16 = x
+                             16 = 2^x
+                             16 = 2^4
+                             hence, log 16 = 4
