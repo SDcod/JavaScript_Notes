@@ -13,7 +13,7 @@ class HashTable {
     this.buckets = new Array(size); // Array to store data
   }
 
-  // 🔹 Corrected Hash Function: Generates a numeric index
+  // 🔹 Corrected Hash Function: Generates a numeric index(using '_' just to identify it as a private method)
   _hash(key) {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
