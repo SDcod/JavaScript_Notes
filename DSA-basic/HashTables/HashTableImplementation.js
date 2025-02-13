@@ -8,8 +8,10 @@
 // Objects ({}): Basic way to store key-value pairs.
 // Map: A more advanced HashTable. (stored in order, map inherited properties cannot be overriden)
 
+//structure buckets[]>bucket[]>[pairs],[pairs]...
 class HashTable {
   constructor(size = 10) {
+    this.size = size;
     this.buckets = new Array(size); // Array to store data
   }
 
@@ -35,7 +37,7 @@ class HashTable {
         return;
       }
     }
-    this.buckets[index].push([key, value]); // Add new key-value pair
+    this.buckets[index].push([key, value]); // Add new key-value pair[by having push we handle collisions in case different key is already present at same index]
   }
 
   // Retrieve a value by key
@@ -62,6 +64,17 @@ class HashTable {
     if (!this.buckets[index]) return false;
     return this.buckets[index].some((pair) => pair[0] === key);
   }
+
+  //print the hashtable
+  printTable() {
+    for (let i = 0; i < this.size; i++) {
+      if (this.buckets[i]) {
+        console.log(`Index ${i}:`, this.buckets[i]);
+      } else {
+        console.log(`Index ${i}: empty`);
+      }
+    }
+  }
 }
 
 // 🔹 Testing Our Custom HashTable
@@ -74,6 +87,4 @@ ht.set("city", "New York");
 console.log(ht.get("name")); // Alice
 console.log(ht.get("age")); // 25
 console.log(ht.has("city")); // true
-
-ht.delete("age");
-console.log(ht.get("age")); // undefined
+ht.printTable();

@@ -48,9 +48,28 @@ class hashTable {
     //key not found
     return undefined;
   }
+
+  delete(key) {
+    let index = this._hash(key);
+    if (!this.buckets[index]) return false;
+    this.buckets[index] = this.buckets[index].filter((pair) => pair[0] !== key);
+
+    return true;
+  }
+
+  has(key) {
+    let index = this._hash(key);
+    if (!this.buckets[index]) return false;
+    return this.buckets[index].some((pair) => pair[0] === key);
+  }
 }
 
 const myTable = new hashTable();
 
 myTable.set("hello", "world");
-console.log(myTable.get("hello"));
+myTable.set("age", 24);
+myTable.set("game", "bgmi");
+console.log(myTable.get("hello")); //world
+console.log(myTable.has("hello")); //hello
+console.log(myTable.delete("hello")); //world
+console.log(myTable.has("hello")); //hello
