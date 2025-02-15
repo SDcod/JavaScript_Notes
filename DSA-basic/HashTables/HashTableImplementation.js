@@ -31,6 +31,7 @@ class HashTable {
       this.buckets[index] = []; // Create a new bucket if empty
     }
     // Check if key exists, update value
+    //use of for loop so that we can iterate over the collision handled pairs
     for (let pair of this.buckets[index]) {
       if (pair[0] === key) {
         pair[1] = value;

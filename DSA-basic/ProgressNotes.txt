@@ -143,3 +143,117 @@ In the context of algorithms, we typically use base-2 logarithm (log₂ n) becau
                              16 = 2^x
                              16 = 2^4
                              hence, log 16 = 4
+
+DSA Topics to focus:
+built-in : Arrays[1d,2d,3d,multidimensional],Objects,Sets,Maps
+custom : LinkedList,Hashtables,Stacks,Queues,Trees,Graphs
+Time/Space complexity basics
+OOPS - Object,Classes,Encapsulation,Abstraction,Inheritance,Polymorphism
+Sorting and Searching
+String manipulation
+solve easy problems daily (Arrays and strings)
+
+Automation focuses:
+Test frameworks/libraries : Moch, Jest, Chai
+
+Cypress - 
+ core concepts revision
+ file reading/asserting/iframes/dragdrop
+ custom configs/utility functions
+Design Patterns (POM, Facory Builder)
+
+API testing - Postman, Cypress API 
+REST principles, GraphQL
+JSON parsing
+Authentication - Oauth,BasicAuth,API key,JWT token
+HTTP methods and status codes
+Mocking - postman mocking server, Wiremock
+Test reporting (MochaAwesome)
+
+Process focused topics:
+CICD (Jenkins/github actions)
+Git commands
+Docker fundamentals
+Cross Browser testing
+
+System Design
+ Test architecture
+ Framework selection Criteria
+ Configuration management
+ Design one e2e Framework
+
+Mock Interviews
+ coding, system design, test scenarios,1 mock daily
+
+STAR method practice
+project explainations
+common behaioral Questions
+framework optimization
+
+
+Data Structures - 
+1. Arrays
+Sorting:
+	QuickSort: Efficient average-case time complexity (O(nlog n))
+	MergeSort: Stable sort, useful when order matters (O(nlog n))
+Searching:
+	Binary Search: Fast search in sorted arrays (O(log n))
+Two Pointers:
+	In-place manipulation, often for sorted arrays (e.g., removing duplicates)
+Sliding Window:
+	Subarray problems, finding maximum/minimum within a window
+
+2. Linked Lists
+Traversal:
+	Iterate through the list, understand the node structure
+Insertion/Deletion:
+	At beginning, end, or at a specific position
+Reversal:
+	In-place reversal, recursive and iterative approaches
+Cycle Detection:
+	Floyd's Tortoise and Hare algorithm
+
+3. Hash Tables (Hash Maps/Sets)
+Implementation not needed. Just understand following:
+	Understand how hash functions work
+	Insertion/Deletion/Lookup
+	Collision Handling
+
+4. Trees (Binary Trees, Binary Search Trees, etc.)
+Traversal:
+	Inorder, Preorder, Postorder (recursive and iterative)
+Searching:
+	Find a node with a given value (especially in BSTs)
+
+5. Stacks
+Implementation not needed. Just understand following:
+	Push/Pop/Peek Operations
+
+6. Queues
+Implementation not needed. Just understand following:
+	Enqueue/Dequeue Operations
+
+7. Heaps (Priority Queues)
+Implementation not needed. Just understand following:
+	Insertion/Deletion (extract-min/max)
+	Building a Heap
+Top K Elements:
+	Using a heap to find k largest/smallest elements
+
+8. Graphs
+Traversal:
+	Breadth-First Search (BFS)
+	Depth-First Search (DFS)
+Shortest Path:
+	Dijkstra's Algorithm
+Cycle Detection:
+	DFS
+
+Algorithms-
+1. Recursion
+	Defining a problem in terms of itself, often leading to elegant and concise solutions.
+	Solve: Factorial calculation, tree traversals, depth-first search.
+
+2. Dynamic Programming
+	Breaking down a problem into overlapping subproblems and storing solutions to avoid recomputation.
+	Solve: Fibonacci sequence, Knapsack problem, Longest Common Subsequence.
