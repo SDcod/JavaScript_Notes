@@ -21,7 +21,7 @@ class hashTable {
       this.buckets[index] = [];
     }
 
-    //check if key/value pair exist, if yes update the value
+    //check if key/value pair exist, if yes update the value 
     for (let pair of this.buckets[index]) {
       if (pair[0] === key) {
         pair[1] = value;

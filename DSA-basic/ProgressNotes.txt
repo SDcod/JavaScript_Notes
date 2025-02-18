@@ -171,8 +171,8 @@ Mocking - postman mocking server, Wiremock
 Test reporting (MochaAwesome)
 
 Process focused topics:
-CICD (Jenkins/github actions)
-Git commands
+CICD (Jenkins/github actions) 
+Git commands (Git helpful: https://uidaholib.github.io/get-git/3workflow.html)
 Docker fundamentals
 Cross Browser testing
 

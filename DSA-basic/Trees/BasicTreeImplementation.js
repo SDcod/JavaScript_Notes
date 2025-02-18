@@ -47,9 +47,9 @@ class tree {
     }
   }
 
-  //using recursion we check if newNode is less than or greater than the root/current root inside a recursive call.
-  //if it is less than the current root check if left is null then isert, if not null then apply recursion to it.
-  //else if it is greater than the current root check if right is null then isert, if not null then apply recursion to it.
+  //using recursion we check if newNode is less than or greater than the root/current parent inside a recursive call.
+  //if it is less than the current parent check if left is null then isert, if not null then apply recursion to it.
+  //else if it is greater than the current parent check if right is null then isert, if not null then apply recursion to it.
   insertNode(root, newNode) {
     if (newNode.value < root.value) {
       if (root.left == null) {
@@ -140,6 +140,70 @@ class tree {
       if (curr.right) queue.push(curr.right);
     }
   }
+
+  //In binary  tree we know that the left most node is the minimum and right most node is the maximum.
+
+  //min function check if root has left nodes if not then root is the minimum
+  //else traverse till the left most value recursively
+  min(root) {
+    if (!root.left) {
+      return root.value;
+    } else {
+      return this.min(root.left);
+    }
+  }
+
+  max(root) {
+    if (!root.right) {
+      return root.value;
+    } else {
+      return this.max(root.right);
+    }
+  }
+
+  //Delete
+  // Here we handle three scenarios
+  // 1)Deleting the Node without children (leaf node)
+  //we simply search and remove the node
+  // 2)Deleting the Node with one child (left or right child both)
+  // we remove the node and replace it's value with child node.
+  // 3)Deleting the Node with two childs
+  // we replace the node value with it's inorder successor.
+  // inorder successor =  (smallest node in the right subtree).
+
+  delete(value) {
+    this.root = this.deleteNode(this.root, value);
+  }
+
+  deleteNode(root, value) {
+    if (!root) {
+      return root; // Node not found
+    }
+
+    if (value < root.value) {
+      root.left = this.deleteNode(root.left, value); // Go left
+    } else if (value > root.value) {
+      root.right = this.deleteNode(root.right, value); // Go right
+    } else {
+      // Case 1: No child (Leaf node)
+      if (!root.left && !root.right) {
+        return null;
+      }
+
+      // Case 2: One child (Left or Right)
+      if (!root.left) {
+        return root.right; // Replace with right child
+      } else if (!root.right) {
+        return root.left; // Replace with left child
+      }
+
+      // Case 3: Two children → Find inorder successor
+      let successorValue = this.min(root.right);
+      root.value = successorValue;
+      root.right = this.deleteNode(root.right, successorValue); // Delete inorder successor
+    }
+    return root;
+  }
 }
 
 let mytree = new tree();
@@ -150,10 +214,15 @@ mytree.insert(15);
 mytree.insert(3);
 mytree.insert(7);
 
-console.log(mytree.search(mytree.root, 3));
-console.log(mytree.search(mytree.root, 2));
+// console.log(mytree.search(mytree.root, 3));
+// console.log(mytree.search(mytree.root, 2));
 
 // mytree.dfsPreOrder(mytree.root);
 // mytree.dfsInOrder(mytree.root);
 // mytree.dfsPostOrder(mytree.root);
+// console.log("minimum " + mytree.min(mytree.root));
+// console.log("maximum " + mytree.max(mytree.root));
+
+mytree.bfsTraversal();
+mytree.delete(5);
 mytree.bfsTraversal();
