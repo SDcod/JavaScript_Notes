@@ -258,3 +258,10 @@ Algorithms-
 	Breaking down a problem into overlapping subproblems and storing solutions to avoid recomputation.
 	Solve: Fibonacci sequence, Knapsack problem, Longest Common Subsequence.
 	
+CICD - 
+git pull - pull any updates from the remote.
+git checkout branch_name - switch to a branch where you want to make changes
+git init - initialize new repo
+git add . - stage all the changes
+git commit -m "commit message" - commit the changes
+
