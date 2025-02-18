@@ -257,3 +257,4 @@ Algorithms-
 2. Dynamic Programming
 	Breaking down a problem into overlapping subproblems and storing solutions to avoid recomputation.
 	Solve: Fibonacci sequence, Knapsack problem, Longest Common Subsequence.
+	
