@@ -66,6 +66,20 @@ Array Questions
 -Find the Kth Largest Element in an array. -> using max-heap and min-heap ** learn and implement a heap first
 
 String Questions
+JS string methods (common)
+// length;
+// charAt;
+// charCodeAt;
+// includes;
+// slice;
+// substring;
+// replace;
+// replaceAll;
+// repeat
+// split
+// trim
+
+
 -Check if a String is a Palindrome.-> by reversing OR traversing till mid and comparing opposite index.
 
 -Reverse a String without using built-in functions. -> array methods OR reading string backwards.
@@ -74,10 +88,14 @@ String Questions
 
 -Check if Two Strings are Anagrams of each other. ->iterate over s1 , check freqency of each char, compare to s2.
 
--Count the Number of Vowels and Consonants in a string.
--Remove Duplicate Characters in a string.
--Implement a Basic String Compression (e.g., "aaabbc" becomes "a3b2c1").
--Count the Frequency of Characters in a string.
+-Count the Number of Vowels and Consonants in a string. ->by using includes method or a regex.
+
+-Remove Duplicate Characters in a string. ->using Map to track seen elements or a Set.
+
+-Implement a Basic String Compression (e.g., "aaabbc" becomes "a3b2c1"). ->using two dynamic comparison in for loop.
+
+-Count the Frequency of Characters in a string. ->using hashmap;
+
 -Check if a String Contains Only Digits.
 -Find the Longest Common Prefix in an array of strings.
 -Check if One String is a Rotation of Another (e.g., "waterbottle" and "erbottlewat").
@@ -90,6 +108,7 @@ String Questions
 -Replace Spaces with "%20" in a given string (like URL encoding).
 -Determine if a String Has All Unique Characters.
 -Convert a String to an Integer without using parseInt.
+
 -Linked List Questions (if you’re ready to work with linked lists in JavaScript)
 -Implement a Singly Linked List.
 -Reverse a Linked List.
@@ -265,3 +284,4 @@ git init - initialize new repo
 git add . - stage all the changes
 git commit -m "commit message" - commit the changes
 
+GithubActions -

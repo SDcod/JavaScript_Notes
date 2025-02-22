@@ -1,6 +1,7 @@
 let arr = [1, 2, 2, 3, 3, 5, 5, 6]; //[1,2,3,5,6,_,_]
 let len = arr.length;
 
+//modifying the array
 function removeDuplicates(arr, len) {
   let left = 0; //to keep track of unique Index;
 
