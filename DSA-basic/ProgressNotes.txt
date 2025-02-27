@@ -96,8 +96,10 @@ JS string methods (common)
 
 -Count the Frequency of Characters in a string. ->using hashmap;
 
--Check if a String Contains Only Digits.
--Find the Longest Common Prefix in an array of strings.
+-Check if a String Contains Only Digits.-> using regex or isNaN
+
+-Find the Longest Common Prefix in an array of strings. ->sorting and comparing first and last string char by char.
+
 -Check if One String is a Rotation of Another (e.g., "waterbottle" and "erbottlewat").
 -Reverse Each Word in a Sentence.
 -Find All Substrings of a String.
@@ -285,3 +287,11 @@ git add . - stage all the changes
 git commit -m "commit message" - commit the changes
 
 GithubActions -
+	Workflows
+		triggers
+			jobs
+				steps/actions
+	
+	Artifacts
+	Secrets
+	
