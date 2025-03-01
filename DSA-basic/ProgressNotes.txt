@@ -106,8 +106,10 @@ JS string methods (common)
 
 -Find All Substrings of a String.-> by using nested loops and substring method.
 
--Find the Longest Palindromic Substring.
--Check if a String is a Valid Shuffle of two other strings.
+-Find the Longest Palindromic Substring.-> finding a palindrome first then comparing with max length str.
+
+-Check if a String is a Valid Shuffle of two other strings.(Anagrams) -> frequency map
+
 -Find the Longest Repeating Character Sequence in a string.
 -Replace Spaces with "%20" in a given string (like URL encoding).
 -Determine if a String Has All Unique Characters.
