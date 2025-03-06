@@ -291,3 +291,6 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 	-document.querySelectorAll("#id_name/.class_name/element") ; //select many element and return nodeList
 		-we need to use forEach method get access of each element of nodeList(set Of Many Element) ;
 		-elem.forEach(function(e){ //logic }) ; 
+
+
+-**Prototypes

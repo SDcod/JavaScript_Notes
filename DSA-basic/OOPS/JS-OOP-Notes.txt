@@ -1,0 +1,27 @@
+#JavaScript and Classes
+
+#OOP - programming paradigms
+Why OOP? to maintain a clear structure of a program and write efficient, resuable code.
+
+#Objects - 
+    collection of properties and methods    
+    
+#Parts of OOP   
+Object literal
+
+-Constructor functions
+-Prototypes
+-Classes
+-Instances(new,this)
+
+# 4 pillars
+-Abstraction
+-Encapsulation
+-Inheritance
+-Polymorphism
+
+Notes : 
+    'new' : keyword creates a new empty object 
+            constructor function is called  
+            this keyword and arguments are injected in it
+              
