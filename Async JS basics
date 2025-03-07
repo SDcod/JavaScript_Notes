@@ -1,10 +1,10 @@
 -Async JS - we use async js so that the program runs in a controlled flow.
-	**callbacks - function reference passed as an argument in another function then executed inside it.
+	**callbacks - function reference passed as an argument in another function then executed inside it.------------------------------------------------
 
       **Async functions in JS : setTimeout(()=>console.log('hello'),3000),
 					setInterval(()=>console.log('hello prints every 2 seconds'), 2000)
 
-	**Promises : constructor syntax 
+	**Promises : constructor syntax ---------------------------------------------
 	let promise = new Promise(function(res,rej){ 
 // executor (the producing code, "singer")
 })
@@ -61,4 +61,30 @@ promiseGreet
     (value) => {console.log(value) })
     .catch((err) =>  {console.log(err)})
 
-	**Async/Await---------------------------
+	**Async/Await------------------------------------------
+
+async : We use the async keyword with a function to represent that the function is an asynchronous function. The async function returns a promise.
+await : The use of await pauses the async function until the promise returns a result (resolve or reject) value.
+Example
+// a promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+    resolve('Promise resolved')}, 4000); 
+});
+
+// async function
+async function asyncFunc() {
+
+    // wait until the promise resolves 
+    let result = await promise; 
+
+    console.log(result);
+    console.log('hello inside');
+}
+
+// calling the async function
+asyncFunc();
+console.log('hello outside');
+
+
+
