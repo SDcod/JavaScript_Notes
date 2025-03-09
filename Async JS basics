@@ -1,0 +1,90 @@
+-Async JS - we use async js so that the program runs in a controlled flow.
+	**callbacks - function reference passed as an argument in another function then executed inside it.------------------------------------------------
+
+      **Async functions in JS : setTimeout(()=>console.log('hello'),3000),
+					setInterval(()=>console.log('hello prints every 2 seconds'), 2000)
+
+	**Promises : constructor syntax ---------------------------------------------
+	let promise = new Promise(function(res,rej){ 
+// executor (the producing code, "singer")
+})
+	The function passed to new Promise is called the executor. When new Promise is created, the executor runs automatically. It contains the producing code which should eventually produce the result. 
+	
+Its arguments resolve and reject are callbacks provided by JavaScript itself. Our code is only inside the executor.
+
+When the executor obtains the result, be it soon or late, doesn’t matter, it should call one of these callbacks:
+
+resolve(value) — if the job is finished successfully, with result value.
+reject(error) — if an error has occurred, error is the error object.
+So to summarize: the executor runs automatically and attempts to perform a job. When it is finished with the attempt, it calls resolve if it was successful or reject if there was an error.
+
+The promise object returned by the new Promise constructor has these internal properties:
+
+state — initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called.
+result — initially undefined, then changes to value when resolve(value) is called or error when reject(error) is called.
+
+
+Consumers: then, catch
+A Promise object serves as a link between the executor (the “producing code” or “singer”) and the consuming functions (the “fans”), which will receive the result or error. Consuming functions can be registered (subscribed) using the methods .then and .catch.
+
+then
+The most important, fundamental one is .then.
+
+The syntax is:
+
+promise.then(
+  function(result) { /* handle a successful result */ },
+  function(error) { /* handle an error */ }
+);
+The first argument of .then is a function that runs when the promise is resolved and receives the result.
+
+The second argument of .then is a function that runs when the promise is rejected and receives the error.
+
+Example
+	let greet = false;
+
+let promiseGreet = new Promise(function(res,rej){
+    if(greet){
+        res('greeted!');
+    }else{
+        rej('Error : not greeted');
+    }
+})
+
+//logs greeted! if greet == true ;
+//logs 'Error : not greeted' if greet == false;
+
+
+
+promiseGreet
+    .then(
+    (value) => {console.log(value) })
+    .catch((err) =>  {console.log(err)})
+
+	**Async/Await------------------------------------------
+
+async : We use the async keyword with a function to represent that the function is an asynchronous function. The async function returns a promise.
+await : The use of await pauses the async function until the promise returns a result (resolve or reject) value.
+Example
+// a promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+    resolve('Promise resolved')}, 4000); 
+});
+
+// async function
+async function asyncFunc() {
+
+    // wait until the promise resolves 
+    let result = await promise; 
+
+    console.log(result);
+    console.log('hello inside');
+}
+
+// calling the async function
+asyncFunc();
+console.log('hello outside');
+
+
+
