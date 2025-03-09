@@ -1,4 +1,4 @@
-// Polymorphism allows different classes to have different implementations of the same method.
+// 4. Polymorphism allows different classes to have different implementations of the same method.
 //Method overriding
 class Employee {
   constructor(name) {
@@ -26,6 +26,7 @@ console.log(manager.getSalary()); // Manager salary is $80,000
 // Method Overriding → Child class provides a specific implementation of a method from the parent class
 // Method Overloading → JavaScript doesn’t support native overloading but can be simulated
 
+//Method Overloading
 //we can simulate method overloading in JS by using below workarounds such as
 //  1.Default parameters
 //  2.arguments objects

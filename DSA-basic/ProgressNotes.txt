@@ -287,6 +287,7 @@ Algorithms-
 	Solve: Fibonacci sequence, Knapsack problem, Longest Common Subsequence.
 	
 CICD - 
+Git-
 git pull - pull any updates from the remote.
 git checkout branch_name - switch to a branch where you want to make changes
 git init - initialize new repo
