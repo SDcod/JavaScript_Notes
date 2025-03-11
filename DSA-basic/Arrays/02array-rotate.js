@@ -30,9 +30,8 @@
 
 // Right rotate Brue force using .pop() and .unshift(); EASIEST time conplexity O(n*k) , space O(1)
 const rotateArray1 = function (nums, k) {
-  k = k % nums.length;
+  k = k % nums.length; //do this to get the number of rotations in case rotation is more than the size of array.
 
-  console.log(k);
   for (let i = 0; i < k; i++) {
     nums.unshift(nums.pop());
   }

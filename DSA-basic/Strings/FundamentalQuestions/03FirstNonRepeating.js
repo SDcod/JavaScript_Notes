@@ -19,8 +19,9 @@ function nonRep(str) {
   let countMap = new Map();
   let len = str.length;
 
-  if (len == 1) return 0;
+  //edge cases
   if (len == 0) return "Provide a string with at least one character.";
+  if (len == 1) return 0;
   if (typeof str !== "string") return "Enter a valid string.";
 
   // First pass: Count frequency
