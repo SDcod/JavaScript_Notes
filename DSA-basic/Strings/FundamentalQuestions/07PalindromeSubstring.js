@@ -35,8 +35,8 @@ function longestPalindrome(str) {
 
 // Function to check if a string is palindrome
 function isPalindrome(s) {
-  let left = 0,
-    right = s.length - 1;
+  let left = 0;
+  let right = s.length - 1;
   while (left < right) {
     if (s[left] !== s[right]) return false;
     left++;

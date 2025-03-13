@@ -9,6 +9,7 @@ function findSub(str, sub) {
   for (let i = 0; i <= l - k; i++) {
     let match = true;
     for (let j = 0; j < k; j++) {
+      //compare character by character after completing innerloop and value still stays true, means we found the substring.
       if (str[i + j] !== sub[j]) {
         match = false;
         break;
