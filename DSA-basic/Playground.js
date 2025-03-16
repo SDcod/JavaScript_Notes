@@ -1,28 +1,37 @@
-// // Example Usage
-let arr1 = [1, 2, 2, 3, 4];
-let arr2 = [3, 2, 2, 4, 5, 6];
-// console.log(intersection(arr1, arr2)); // Output: [3,2,2,4]
+// Problem 1: Longest Substring Without Repeating Characters
+// 📌 Problem Statement:
+// Given a string, find the length of the longest substring without repeating characters.
 
-//iterate over first array and maintain a frequency map
-//iterate over sec arr and chek if the element exists in freq map, if yes reduce count by one and add it to res arr,
-//if no then simply skip it.
+// 🔹 Example:
+// Input: "abcabcbb"
+// Output: 3   // "abc" is the longest substring without repeating characters
 
-const sol = (arr1, arr2) => {
-  let freq = {};
-  let res = [];
+//using sliding window
+/*
+idea is to iterate over the string an store the index of the character in a seen map.
+if the character is seen and is in current window, update the start of unique window.
+update the last seen index of current character in seen map
+compare maxlenght and current window length.
+*/
 
-  for (let num of arr1) {
-    freq[num] = (freq[num] || 0) + 1;
-  }
+function sol(s) {
+  let seen = {};
+  let left = 0;
+  let maxLen = 0;
 
-  for (let num of arr2) {
-    if (freq[num] > 0) {
-      res.push(num);
-      freq[num]--;
+  for (let right = 0; right < s.length; right++) {
+    let currentChar = s[right];
+
+    if (seen[currentChar] !== undefined && seen[currentChar] >= left) {
+      left = seen[currentChar] + 1;
     }
+
+    seen[currentChar] = right;
+
+    maxLen = Math.max(maxLen, right - left + 1);
   }
 
-  return res;
-};
+  return maxLen;
+}
 
-console.log(sol(arr1, arr2));
+console.log(sol("abcabcbb")); //3

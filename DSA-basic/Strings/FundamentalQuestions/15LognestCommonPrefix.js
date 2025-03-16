@@ -21,6 +21,7 @@ let longestCommonPrefix = (arr) => {
   //sorting array
   arr.sort();
 
+  console.log(arr);
   let n = arr.length;
   let minLen = Math.min(arr[0].length, arr[n - 1].length);
   let i = 0;
@@ -34,5 +35,5 @@ let longestCommonPrefix = (arr) => {
 };
 
 console.log(longestCommonPrefix(["geeksforgeeks", "geeks", "geek", "geezer"])); //gee
-console.log(longestCommonPrefix(["apple", "ape", "april"])); //ap
-console.log(longestCommonPrefix(["hello", "world"])); //""
+// console.log(longestCommonPrefix(["apple", "ape", "april"])); //ap
+// console.log(longestCommonPrefix(["hello", "world"])); //""

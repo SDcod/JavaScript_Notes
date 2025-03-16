@@ -42,9 +42,11 @@
 
 //**************************************SLIDING WINDOW APPROACH */
 
+//sliding window and two pointer technique
+
 function longestSubstring(s) {
   let charMap = {}; // Store last index of characters
-  let l = 0;
+  let l = 0; //left pointer to track the start of non repeating window
   let maxLen = 0;
 
   for (let r = 0; r < s.length; r++) {
@@ -52,14 +54,14 @@ function longestSubstring(s) {
 
     // If character is already in window, move left pointer (l) ahead
     if (charMap[currentChar] !== undefined && charMap[currentChar] >= l) {
-      l = charMap[currentChar] + 1;
+      l = charMap[currentChar] + 1; //update left pointer to start of non repeating window by incrementing it by one
     }
 
     // Store/update the last seen index of the character
     charMap[currentChar] = r;
 
     // Update max length
-    maxLen = Math.max(maxLen, r - l + 1);
+    maxLen = Math.max(maxLen, r - l + 1); //compare maxlen and difference between right pointer and left pointer.
   }
 
   return maxLen;
