@@ -37,7 +37,7 @@ const insertionWithDuplicates = (arr1, arr2) => {
   for (let num of arr2) {
     if (eleCount[num] > 0) {
       result.push(num);
-      eleCount[num]--;
+      eleCount[num]--; //to handle duplicates
     }
   }
 
