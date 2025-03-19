@@ -52,7 +52,7 @@ function longestSubstring(s) {
   for (let r = 0; r < s.length; r++) {
     let currentChar = s[r];
 
-    // If character is already in window, move left pointer (l) ahead
+    // If current character is already in window, move left pointer (l) ahead
     if (charMap[currentChar] !== undefined && charMap[currentChar] >= l) {
       l = charMap[currentChar] + 1; //update left pointer to start of non repeating window by incrementing it by one
     }

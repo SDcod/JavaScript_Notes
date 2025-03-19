@@ -4,7 +4,7 @@
 
 let arr = [1, 1, 1, 1, 2, 2, 2, 1, 3];
 
-function MajorityElement(arr) {
+function MajorityElement(arr, n) {
   let map = {};
 
   for (let num of arr) {
@@ -13,7 +13,7 @@ function MajorityElement(arr) {
     } else {
       map[num] = 1;
     }
-    if (map[num] >= arr.length / 2) {
+    if (map[num] >= arr.length / n) {
       return num;
     }
     // map[num] = (map[num] || 0) + 1;
@@ -22,7 +22,7 @@ function MajorityElement(arr) {
   return -1;
 }
 
-console.log(MajorityElement(arr));
+console.log(MajorityElement(arr, 2));
 
 //More optimized Boyer-Moore Algorithm *********************************************O(n), O(1)
 // function boyerMooreMajority(arr) {
