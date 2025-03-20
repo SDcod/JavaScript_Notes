@@ -54,7 +54,7 @@ function longestSubstring(s) {
 
     // If current character is already in window, move left pointer (l) ahead
     if (charMap[currentChar] !== undefined && charMap[currentChar] >= l) {
-      l = charMap[currentChar] + 1; //update left pointer to start of non repeating window by incrementing it by one
+      l = charMap[currentChar] + 1; //update left pointer to start of non repeating window by incrementing it by one position of current char.
     }
 
     // Store/update the last seen index of the character
