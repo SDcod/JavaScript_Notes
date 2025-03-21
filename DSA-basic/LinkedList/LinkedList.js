@@ -73,9 +73,60 @@ class LinkedList {
 
   //TBD
   insertAt(value, index) {
+    if (index < 0 || index > this.size()) return "enter valid index";
+
+    let newNode = new Node(value);
     if (index === 0) {
-      this.prepend(value);
+      newNode.next = this.head;
+      this.head = newNode;
+      return "value inserted at head";
     }
+
+    //loop till we reach at the previous node of mentioned index.
+    //assign newNode's next to the current's next (at this time both point at the target index node)
+    //point the current's next to the newNode.
+
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+
+    newNode.next = current.next;
+    current.next = newNode;
+    return "value inserted at index " + index;
+  }
+
+  delete(value) {
+    if (this.size() == 0) return "empty list";
+
+    //traverse till the previous node of target element
+    let current = this.head;
+    while (current.next && current.next.value !== value) {
+      current = current.next;
+    }
+
+    if (current.next) {
+      current.next = current.next.next;
+      return "deleted " + value;
+    } else {
+      return "value not found in list";
+    }
+  }
+
+  searchItem(item) {
+    //edge case
+    if (this.size() == 0) {
+      return "empty list";
+    }
+
+    let current = this.head;
+    while (current) {
+      if (current.value == item) {
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
   }
 }
 
@@ -88,3 +139,11 @@ myList.append(24);
 
 console.log(myList.size());
 console.log(myList.display());
+console.log(myList.insertAt(22.1, 2));
+console.log(myList.insertAt(22.1, 6));
+console.log(myList.insertAt(22.1, -2));
+console.log(myList.display());
+myList.delete(22.1);
+console.log(myList.display());
+console.log(myList.searchItem(23));
+console.log(myList.searchItem(28));
