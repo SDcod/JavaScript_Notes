@@ -118,8 +118,9 @@ JS string methods (common)
 
 -Convert a String to an Integer without using parseInt. -> using Number([...str].filter((a)=>a>="0" && a<="9").join(''))
 
--Linked List Questions (if you’re ready to work with linked lists in JavaScript) -------------------------------
--Implement a Singly Linked List. To do *****
+*Linked List Questions (if you’re ready to work with linked lists in JavaScript) -------------------------------
+-Implement a Singly Linked List. DONE
+
 -Reverse a Linked List.
 -Find the Middle Element of a linked list.
 -Check if a Linked List has a Cycle.
