@@ -2,9 +2,7 @@
 // A class is a blueprint for creating objects. An object is an instance of a class.
 
 // ✅ Example: Creating Objects from a Class
-// js
-// Copy
-// Edit
+
 class Person {
   constructor(name, age) {
     this.name = name;
