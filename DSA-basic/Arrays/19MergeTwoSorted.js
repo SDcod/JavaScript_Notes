@@ -1,40 +1,36 @@
-let arr1 = [1, 3, 5, 7];
-let arr2 = [2, 4, 6, 8];
+function mergeSortedArrays(arr1, arr2) {
+  const mergedArray = [];
+  let i = 0;
+  let j = 0;
 
-//OUTPUT
-// arr1 = [1, 2, 3, 4];
-// arr2 = [5, 6, 7, 8];
-
-function merge(arr1, arr2) {
-  let i;
-
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] > arr2[0]) {
-      [arr1[i], arr2[0]] = [arr2[0], arr1[i]];
-
-      let first = arr2[0];
-      let j = 1;
-
-      //sort the second array
-      while (j < arr2.length && arr2[j] < first) {
-        arr2[j - 1] = arr2[j];
-        j++;
-      }
-      arr2[j - 1] = first;
+  //compare numbers one by one until any one array is exhausted.
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      mergedArray.push(arr1[i]);
+      i++;
+    } else {
+      mergedArray.push(arr2[j]);
+      j++;
     }
   }
 
-  return [...[arr1], ...[arr2]];
+  //add remaining elements from arr1 to result array if it is not exhausted.
+  while (i < arr1.length) {
+    mergedArray.push(arr1[i]);
+    i++;
+  }
+
+  //add remaining elements from arr2 to result array if it is not exhausted.
+  while (j < arr2.length) {
+    mergedArray.push(arr2[j]);
+    j++;
+  }
+
+  return mergedArray;
 }
 
-merge(arr1, arr2);
-
-console.log(arr1);
-console.log(arr2);
-
-//Using inbuilt methods -------------------------------------------------------------------
-// let joined = arr1.concat(arr2).sort((a, b) => a - b);
-// arr1 = joined.slice(0, arr1.length);
-// arr2 = joined.slice(arr1.length);
-// console.log(arr1);
-// console.log(arr2);
+// Example usage:
+const array1 = [1, 3, 5, 7];
+const array2 = [2, 4, 6, 8];
+const merged = mergeSortedArrays(array1, array2);
+console.log(merged); // Output: [1, 2, 3, 4, 5, 6, 7, 8]

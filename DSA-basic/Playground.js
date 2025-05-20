@@ -1,16 +1,33 @@
-//find major element in an array
+function mergeSortedArrays(arr1, arr2) {
+  const mergedArray = [];
+  let i = 0;
+  let j = 0;
 
-let arr = [1, 2, 3, 3, 7, 7, 7, 4, 5, 5, 7, 7, 7, 1, 1, 1, 1, 2];
-
-let candidate = null;
-let count = 0;
-
-// Step 1: Find the candidate that is in majority
-for (let num of arr) {
-  if (count === 0) {
-    candidate = num; // Update the candidate
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] <= arr2[j]) {
+      mergedArray.push(arr1[i]);
+      i++;
+    } else {
+      mergedArray.push(arr2[j]);
+      j++;
+    }
   }
-  count += num === candidate ? 1 : -1; // Adjust the count
+
+  while (i < arr1.length) {
+    mergedArray.push(arr1[i]);
+    i++;
+  }
+
+  while (j < arr2.length) {
+    mergedArray.push(arr2[j]);
+    j++;
+  }
+
+  return mergedArray;
 }
 
-console.log(candidate);
+// Example usage:
+const array1 = [1, 3, 5, 7];
+const array2 = [2, 4, 6, 8];
+const merged = mergeSortedArrays(array1, array2);
+console.log(merged); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
