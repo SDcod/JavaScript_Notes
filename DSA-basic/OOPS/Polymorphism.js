@@ -41,7 +41,7 @@ class Calculator {
 
 let myCal = new Calculator();
 console.log(myCal.add(6));
-console.log(myCal.add(6 + 3));
+console.log(myCal.add(6, 3));
 
 //2.arguments object
 class Printer {

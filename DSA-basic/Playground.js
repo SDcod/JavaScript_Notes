@@ -1,33 +1,22 @@
-function mergeSortedArrays(arr1, arr2) {
-  const mergedArray = [];
-  let i = 0;
-  let j = 0;
+let arr = [1, 2, 3, 4, 5, 8, 9, 10, 12];
+let n = 13;
+//[6,7,11,13]
 
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] <= arr2[j]) {
-      mergedArray.push(arr1[i]);
-      i++;
+//iterate using for loop if current loop index is equal to pointer element, increment pointer ele.
+//else elements are not equal add current loop idx to res array, and proceed.
+function missing(arr, n) {
+  let res = [];
+  let p = 0; //track current array index
+
+  for (let i = 1; i <= n; i++) {
+    if (i == arr[p]) {
+      p++;
     } else {
-      mergedArray.push(arr2[j]);
-      j++;
+      res.push(i);
     }
   }
 
-  while (i < arr1.length) {
-    mergedArray.push(arr1[i]);
-    i++;
-  }
-
-  while (j < arr2.length) {
-    mergedArray.push(arr2[j]);
-    j++;
-  }
-
-  return mergedArray;
+  return res;
 }
 
-// Example usage:
-const array1 = [1, 3, 5, 7];
-const array2 = [2, 4, 6, 8];
-const merged = mergeSortedArrays(array1, array2);
-console.log(merged); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(missing(arr, 13));
