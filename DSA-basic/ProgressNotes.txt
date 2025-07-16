@@ -155,7 +155,41 @@ Miscellaneous Questions
 -Implement Breadth-First Search (BFS) on a graph.
 -Solve the Tower of Hanoi Problem using recursion.
 
+---------------------------------------------------------------------------
 HELPFUL
+
+
+For Time Complexity:
+Identify the Dominant Operation:
+	Determine the operation that will be executed most frequently as the input size (n) grows. This is often found within loops or recursive calls.
+Count Operations in Loops:
+	Single Loop: A single loop iterating n times will generally result in O(n) complexity.
+	Nested Loops: Two nested loops, each iterating n times, will result in O(n²) complexity. Three nested loops would be O(n³), and so on.
+	Logarithmic Loops: If a loop divides the input in half repeatedly (e.g., binary search), it's O(log n).
+Recursive Functions:
+	Analyze the number of recursive calls and the work done in each call. This often involves understanding the call tree and its depth.
+Constant Time Operations:
+	Operations that take a fixed amount of time regardless of input size (e.g., variable assignment, arithmetic operations, array element access by index) are O(1).
+Ignore Lower Order Terms and Constants:
+	In Big O notation, you focus on the term that grows fastest. For example, O(n² + n) simplifies to O(n²), and O(2n) simplifies to O(n).
+
+For Space Complexity:
+Identify Data Structures and Variables:
+	Determine what variables and data structures are created and how their size relates to the input.
+Input-Dependent Space:
+	If an array or data structure is created with a size proportional to the input n, the space complexity will be O(n).
+Constant Space:
+	Variables that occupy a fixed amount of memory regardless of input size contribute O(1) space complexity.
+Recursive Call Stack:
+	Recursive functions can add to space complexity due to the call stack. The depth of the recursion can determine the space needed, which might be O(n) in the worst case for some recursive algorithms.
+General "Tricks" (Patterns to Recognize):
+	Iteration over an input: Often O(n).
+	Nested iterations: Often O(n²), O(n³), etc.
+	Operations that repeatedly halve the input: Often O(log n).
+	Creating a new data structure of the same size as input: Often O(n) space.
+	Fixed number of variables: O(1) space.
+
+
 -------- List of topics for basic DSA and handy notes ----------------
 Big O	    Description	          Example
 O(1)	    Constant time        	Accessing an array element.

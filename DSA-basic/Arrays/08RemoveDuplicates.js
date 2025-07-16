@@ -14,6 +14,7 @@ function removeDuplicates(arr, len) {
     //if both elements are equal do nothing and simply let the loop increace the right value by default.
   }
 
+  //returns number of non-duplicate elements
   return left + 1;
 }
 

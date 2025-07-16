@@ -16,7 +16,7 @@ const rmDupHash = (a) => {
   let result = [];
 
   for (let num of a) {
-    if (!hashMap[num]) {
+    if (hashMap[num] == undefined) {
       result.push(num);
       hashMap[num] = true;
     }

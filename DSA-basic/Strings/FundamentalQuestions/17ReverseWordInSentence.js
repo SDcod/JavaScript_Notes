@@ -11,6 +11,8 @@ let result = para
 
 console.log(result);
 
+// let str = "Hello there! how are you doing?";
+// let temp = str.split(" ");
 // let res = "";
 // for (let word of temp) {
 //   res += word.split("").reverse().join("") + " ";
