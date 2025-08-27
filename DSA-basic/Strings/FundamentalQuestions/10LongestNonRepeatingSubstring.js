@@ -72,3 +72,27 @@ console.log(longestSubstring("abcabcbb")); // Output: 3 ("abc")
 console.log(longestSubstring("bbbbb")); // Output: 1 ("b")
 console.log(longestSubstring("pwwkew")); // Output: 3 ("wke")
 console.log(longestSubstring("")); // Output: 0
+
+// custom sol
+// function sol(str) {
+//   let len = str.length;
+//   let maxSub = "";
+//   let p = 0;
+
+//   if (len == 0) return -1;
+//   if (len <= 1) return str;
+
+//   for (let i = 1; i <= str.length; i++) {
+//     let currSub = str.substring(p, i);
+//     if (currSub.includes(str[i])) {
+//       p = i;
+//     }
+//     if (currSub.length >= maxSub.length) maxSub = currSub;
+//   }
+//   return maxSub;
+// }
+
+// console.log(sol("bbbbb"));
+// console.log(sol("abcabcbb"));
+// console.log(sol("pwwkew"));
+// console.log(sol(""));

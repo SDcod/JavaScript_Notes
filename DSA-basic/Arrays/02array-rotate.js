@@ -1,5 +1,5 @@
 //-Rotate an Array by k positions (both left and right rotations)//time O(n), space O(1)
-//left k=2 positions. [1,2,3,4,5,6] -> [5,6,1,2,3,4]
+//right k=2 positions. [1,2,3,4,5,6] -> [5,6,1,2,3,4]
 //idea 1)reverse entire array - [6,5,4,3,2,1]
 //2)reverse first k elements. -[5,6,4,3,2,1]
 //3)reverse elements after k. -[5,6,1,2,3,4]
@@ -21,8 +21,8 @@
 // reverseArr(originalArr, 0, k - 1); //1
 // reverseArr(originalArr, k, originalArr.length - 1); //1
 
-// for rigt rotate reverse first k elements, reverse remaining elements till end, reverse entire arr
-//[2,1,3,4,5,6]->[2,1,6,5,4,3]->[3,4,5,6,1,2]
+// for left rotate reverse first k elements, reverse remaining elements till end, reverse entire arr
+// [1,2,3,4,5,6] = [2,1,3,4,5,6]->[2,1,6,5,4,3]->[3,4,5,6,1,2]
 
 // console.log(originalArr);
 
