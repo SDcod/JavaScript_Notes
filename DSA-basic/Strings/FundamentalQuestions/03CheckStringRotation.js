@@ -48,4 +48,4 @@ let s2 = "erbottlewat";
 
 let conc = s1 + s1;
 
-conc.includes(s1) ? console.log(true) : console.log(false);
+conc.includes(s2) ? console.log(true) : console.log(false);

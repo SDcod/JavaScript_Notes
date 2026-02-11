@@ -187,8 +187,7 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 			MAIN Stack - In this stack JS executes the code and provides output.
 			SIDE Stack - In this stack JS executes the code. (Asycn code is pushed in side stack).
 			
-			All the async code is pushed to main stack and whenever the code completes its execution in main stack and it is empty, then only 
-			
+			All the code is pushed to main stack and whenever the code completes its execution in main stack and it is empty, then only 
 			---->'EVENT LOOP'<---- handles passing of the async from Side Stack to Main Stack only when the async code has completed its execution in Side stack.
 			
 			  Alternate expln :-
