@@ -117,7 +117,7 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 	-Falsy : 0 / -0 / 0n / " " / false / null / undefined / NaN / document.all
 	-Truthy : all except above (true,nonzero numbers, non empty strings, objects, bigint values excluding zero, symbols)
 
---forEach : works on ARRAYS to loop through the entire array values one by one. (by default forEach creates a temporary copy, and original array is intact).
+--forEach : works on ARRAYS to loop through the entire array values one by one. (by default forEach creates a temporary copy, and original array is intact). ForEach returns undefined
 		arr.forEach((val)=>{val+1})
 		
 --forin : used to loop OBJECTS.
@@ -157,7 +157,7 @@ JS topics -BASICS - THIS IS JUST HIGHLEVEL OVERVIEW of important topics in JS
 				Array.isArray(arr); // return true if array , and false if not.
 
 --object methods : delete object props
-					// delet obj.prop;
+					// delete obj.prop;
 					
 			
 			
